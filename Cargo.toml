@@ -1,11 +1,15 @@
 [package]
-name = "mcaptcha-browser"
+name = "pow-wasm"
 version = "0.1.0"
 authors = ["realaravinth <realaravinth@batsense.net>"]
-edition = "2018"
+edition = "2021"
 license = "MIT OR Apache-2.0"
-repository = "https://github.com/mCaptcha/browser"
-description = "mCaptcha client library for the web"
+homepage = "https://mcaptcha.org"
+repository = "https://github.com/mCaptcha/pow_wasm"
+documentation = "https://mcaptcha.github.io/pow_wasm/pow_wasm/index.html"
+description = "WASM port of the proof-of-work library used in mCaptcha "
+readme = "README.md"
+keywords = ["pow", "mcaptcha", "wasm", "CAPTCHA", "proof-of-work"]
 
 [lib]
 crate-type = ["cdylib", "rlib"]

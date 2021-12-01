@@ -28,7 +28,7 @@
 //!
 //! generate proof-of-work
 //! ```rust
-//!  use mcaptcha_browser::*;
+//!  use pow_wasm::*;
 //!  use pow_sha256::*;
 //!
 //!
@@ -86,7 +86,7 @@ impl From<PoW<String>> for Work {
 /// generate proof-of-work
 /// ```rust
 /// fn main() {
-///    use mcaptcha_browser::*;
+///    use pow_wasm::*;
 ///    use pow_sha256::*;
 ///
 ///
