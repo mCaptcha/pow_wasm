@@ -1,3 +1,3 @@
 (function() {var implementors = {};
-implementors["mcaptcha_browser"] = [{"text":"impl Freeze for <a class=\"struct\" href=\"mcaptcha_browser/struct.Work.html\" title=\"struct mcaptcha_browser::Work\">Work</a>","synthetic":true,"types":["mcaptcha_browser::Work"]}];
+implementors["pow_wasm"] = [{"text":"impl Freeze for <a class=\"struct\" href=\"pow_wasm/struct.Work.html\" title=\"struct pow_wasm::Work\">Work</a>","synthetic":true,"types":["pow_wasm::Work"]}];
 if (window.register_implementors) {window.register_implementors(implementors);} else {window.pending_implementors = implementors;}})()

@@ -1,3 +1,3 @@
 var N = null;var sourcesIndex = {};
-sourcesIndex["mcaptcha_browser"] = {"name":"","files":["lib.rs"]};
+sourcesIndex["pow_wasm"] = {"name":"","files":["lib.rs"]};
 createSourceSidebar();

@@ -1,1 +1,1 @@
-window.ALL_CRATES = ["mcaptcha_browser"];
+window.ALL_CRATES = ["pow_wasm"];
