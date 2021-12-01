@@ -6,7 +6,7 @@
 
 [![0.1.0](https://img.shields.io/badge/Rust_docs-master-dea584)](https://mcaptcha.github.io/browser/rust/mcaptcha_browser/index.html)
 [![0.1.0](https://img.shields.io/badge/TypeScript_docs-master-2b7489)](https://mcaptcha.github.io/browser/ts/docs/modules.html)
-![Build)](<https://github.com/mCaptcha/pow_wasm/workflows/CI%20(Linux)/badge.svg>)
+[![Build](https://github.com/mCaptcha/pow_wasm/actions/workflows/linux.yml/badge.svg)](https://github.com/mCaptcha/pow_wasm/actions/workflows/linux.yml)
 [![dependency status](https://deps.rs/repo/github/mCaptcha/pow_wasm/status.svg)](https://deps.rs/repo/github/mCaptcha/pow_wasm)
 <br />
 [![codecov](https://codecov.io/gh/mCaptcha/pow_wasm/branch/master/graph/badge.svg)](https://codecov.io/gh/mCaptcha/pow_wasm)
