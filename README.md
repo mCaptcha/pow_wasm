@@ -89,3 +89,21 @@ wasm-pack publish
   for logging panic messages to the developer console.
 - [`wee_alloc`](https://github.com/rustwasm/wee_alloc), an allocator optimized
   for small code size.
+
+## Funding
+
+### NLnet
+
+<div align="center">
+	<img
+		height="150px"
+		alt="NLnet NGIZero logo"
+		src="./static/third-party/NGIZero-green.hex.svg"
+	/>
+</div>
+
+<br />
+
+2023 development is funded through the [NGI0 Entrust
+Fund](https://nlnet.nl/entrust), via [NLnet](https://nlnet.nl/). Please
+see [here](https://nlnet.nl/project/mCaptcha/) for more details.
