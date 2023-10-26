@@ -20,7 +20,7 @@ wasm_bindgen_test_configure!(run_in_browser);
 
 #[wasm_bindgen_test]
 fn pow_generation_works() {
-    use pow_sha256::*;
+    use mcaptcha_pow_sha256::*;
     use pow_wasm::*;
 
     const SALT: &str = "yrandomsaltisnotlongenoug";

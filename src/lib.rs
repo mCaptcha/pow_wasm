@@ -29,7 +29,7 @@
 //! generate proof-of-work
 //! ```rust
 //!  use pow_wasm::*;
-//!  use pow_sha256::*;
+//!  use mcaptcha_pow_sha256::*;
 //!
 //!
 //!  // salt using which PoW should be computed
@@ -40,7 +40,7 @@
 //!  const DIFFICULTY: u32 = 1000;
 //!
 //!  // currently gen_pow() returns a JSON formated string to better communicate
-//!  // with JavaScript. See [PoW<T>][pow_sha256::PoW] for schema
+//!  // with JavaScript. See [PoW<T>][mcaptcha_pow_sha256::PoW] for schema
 //!  let serialised_work = gen_pow(SALT.into(), PHRASE.into(), DIFFICULTY);
 //!
 //!
@@ -66,7 +66,7 @@ use wasm_bindgen::prelude::*;
 #[global_allocator]
 static ALLOC: wee_alloc::WeeAlloc = wee_alloc::WeeAlloc::INIT;
 
-use pow_sha256::{ConfigBuilder, PoW};
+use mcaptcha_pow_sha256::{ConfigBuilder, PoW};
 
 #[derive(Deserialize, Serialize)]
 pub struct Work {
@@ -87,7 +87,7 @@ impl From<PoW<String>> for Work {
 /// ```rust
 /// fn main() {
 ///    use pow_wasm::*;
-///    use pow_sha256::*;
+///    use mcaptcha_pow_sha256::*;
 ///
 ///
 ///    // salt using which PoW should be computed
@@ -98,7 +98,7 @@ impl From<PoW<String>> for Work {
 ///    const DIFFICULTY: u32 = 1000;
 ///
 ///    // currently gen_pow() returns a JSON formated string to better communicate
-///    // with JavaScript. See [PoW<T>][pow_sha256::PoW] for schema
+///    // with JavaScript. See [PoW<T>][mcaptcha_pow_sha256::PoW] for schema
 ///    let serialised_work = gen_pow(SALT.into(), PHRASE.into(), DIFFICULTY);
 ///
 ///
@@ -128,7 +128,7 @@ pub fn gen_pow(salt: String, phrase: String, difficulty_factor: u32) -> String {
 #[cfg(test)]
 mod tests {
     use super::*;
-    use pow_sha256::PoWBuilder;
+    use mcaptcha_pow_sha256::PoWBuilder;
 
     const SALT: &str = "yrandomsaltisnotlongenoug";
     const PHRASE: &str = "ironmansucks";
