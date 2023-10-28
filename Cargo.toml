@@ -1,6 +1,6 @@
 [package]
 name = "pow-wasm"
-version = "0.1.0-rc1"
+version = "0.1.0-rc2"
 authors = ["realaravinth <realaravinth@batsense.net>"]
 edition = "2021"
 license = "MIT OR Apache-2.0"
