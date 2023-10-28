@@ -1,6 +1,6 @@
 [package]
 name = "pow-wasm"
-version = "0.1.0-alpha-1"
+version = "0.1.0-rc1"
 authors = ["realaravinth <realaravinth@batsense.net>"]
 edition = "2021"
 license = "MIT OR Apache-2.0"
@@ -47,5 +47,5 @@ wasm-bindgen-test = "0.3.28"
 ## Tell `rustc` to optimize for small code size.
 #opt-level = "s"
 
-[package.metadata.wasm-pack.profile.release]
-wasm-opt = false
+#[package.metadata.wasm-pack.profile.release]
+#wasm-opt = false
