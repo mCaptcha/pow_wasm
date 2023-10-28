@@ -142,7 +142,7 @@ pub fn stepped_gen_pow(
     loop {
         match config.stepped_prove_work(&phrase, difficulty_factor, step, inter) {
             Ok(IncrementalSolve::Intermediate(result, nonce, prefix, difficulty)) => {
-                let data = JsValue::from(difficulty);
+                let data = JsValue::from(nonce);
                 let _ = f.call1(&this, &data);
                 inter = Some(IncrementalSolve::Intermediate(
                     result, nonce, prefix, difficulty,
