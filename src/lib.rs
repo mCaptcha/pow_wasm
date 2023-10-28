@@ -125,6 +125,40 @@ pub fn gen_pow(salt: String, phrase: String, difficulty_factor: u32) -> String {
     serde_json::to_string(&work).unwrap()
 }
 
+#[wasm_bindgen]
+pub fn stepped_gen_pow(
+    salt: String,
+    phrase: String,
+    difficulty_factor: u32,
+    step: usize,
+    f: &js_sys::Function,
+) -> String {
+    use mcaptcha_pow_sha256::IncrementalSolve;
+
+    let config = ConfigBuilder::default().salt(salt).build().unwrap();
+    let this = JsValue::null();
+
+    let mut inter = None;
+    loop {
+        match config.stepped_prove_work(&phrase, difficulty_factor, step, inter) {
+            Ok(IncrementalSolve::Intermediate(result, nonce, prefix, difficulty)) => {
+                let data = JsValue::from(difficulty);
+                let _ = f.call1(&this, &data);
+                inter = Some(IncrementalSolve::Intermediate(
+                    result, nonce, prefix, difficulty,
+                ));
+                continue;
+            }
+
+            Ok(IncrementalSolve::Work(w)) => {
+                let work: Work = w.into();
+                return serde_json::to_string(&work).unwrap();
+            }
+            Err(e) => panic!("{}", e),
+        };
+    }
+}
+
 #[cfg(test)]
 mod tests {
     use super::*;
