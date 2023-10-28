@@ -1,1 +1,1 @@
-window.SIDEBAR_ITEMS = {"fn":["gen_pow"],"struct":["Work"]};
+window.SIDEBAR_ITEMS = {"fn":["gen_pow","stepped_gen_pow"],"struct":["Work"]};
