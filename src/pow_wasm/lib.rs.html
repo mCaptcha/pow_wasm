@@ -327,7 +327,7 @@
     <span class="kw">loop </span>{
         <span class="kw">match </span>config.stepped_prove_work(<span class="kw-2">&amp;</span>phrase, difficulty_factor, step, inter) {
             <span class="prelude-val">Ok</span>(IncrementalSolve::Intermediate(result, nonce, prefix, difficulty)) =&gt; {
-                <span class="kw">let </span>data = JsValue::from(difficulty);
+                <span class="kw">let </span>data = JsValue::from(nonce);
                 <span class="kw">let _ </span>= f.call1(<span class="kw-2">&amp;</span>this, <span class="kw-2">&amp;</span>data);
                 inter = <span class="prelude-val">Some</span>(IncrementalSolve::Intermediate(
                     result, nonce, prefix, difficulty,
